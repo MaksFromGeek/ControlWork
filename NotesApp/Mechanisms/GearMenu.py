@@ -21,12 +21,13 @@ def startMenu():
             task = int(input('Введите от 1 до 7: '))
         except:
             print('Неверно введено число от 1 до 7')
+            raise
         
         if task == 1: # Проверка введённого числа и запуск функции в основном фаиле
             print('\nСоздание заметки.')
             c.create_note(get_note_data())
         elif task == 2:
-            print('\nПоказать заметку.')
+            print('\nПоказанть заметку.')
             if c.notes_exist():
                 c.show_note(int(get_number()))
         elif task == 3:
